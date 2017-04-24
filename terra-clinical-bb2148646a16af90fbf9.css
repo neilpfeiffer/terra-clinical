@@ -1106,6 +1106,233 @@ ul {
   margin-bottom: 0.357rem; }
   .terraClinical-DetailView-subtitle:last-child {
     margin: 0; }
+/**
+ * IE/Edge need both width and height defined to properly size SVG icons
+ */
+.terra-Icon {
+  display: inline-block;
+  vertical-align: -0.15em; }
+
+/**
+ * The following selectors match all SVG elements, (path, cirlec, line, rect, etc), within inline SVG
+ * which do not have a predefined fill color.
+ */
+.terra-Icon *:not([fill]) {
+  fill: currentColor; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
+
+.terra-Icon.is-spin {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear; }
+
+[dir='rtl'] .terra-Icon.is-bidi {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+button.terra-Button,
+html input[type='button'].terra-Button,
+input[type='reset'].terra-Button,
+input[type='submit'].terra-Button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button; }
+
+.terra-Button {
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.429;
+  margin-bottom: 0.357em;
+  margin-top: 0.357em;
+  padding-bottom: 0.286em;
+  padding-top: 0.286em;
+  text-decoration: none;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: normal; }
+  [dir='ltr'] .terra-Button {
+    margin-left: 0;
+    margin-right: 0.714em; }
+  [dir='rtl'] .terra-Button {
+    margin-left: 0.714em;
+    margin-right: 0; }
+  [dir='ltr'] .terra-Button {
+    padding-left: 0.714em;
+    padding-right: 0.714em; }
+  [dir='rtl'] .terra-Button {
+    padding-left: 0.714em;
+    padding-right: 0.714em; }
+  [dir='ltr'] .terra-Button,
+  [dir='rtl'] .terra-Button {
+    text-align: center; }
+  .terra-Button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  .terra-Button:-moz-focusring {
+    outline: 1px dotted #1c1f21;
+    -moz-outline-radius: 0.25em; }
+  .terra-Button:disabled, .terra-Button.is-disabled {
+    cursor: default;
+    opacity: 0.7;
+    pointer-events: none; }
+  [dir='ltr'] .terra-Button:last-child {
+    margin-right: 0; }
+  [dir='rtl'] .terra-Button:last-child {
+    margin-left: 0; }
+
+[dir='ltr'] .terra-Button-text:first-child:not(:last-child) {
+  margin-right: 0.357em; }
+
+[dir='rtl'] .terra-Button-text:first-child:not(:last-child) {
+  margin-left: 0.357em; }
+
+[dir='ltr'] .terra-Button-text:nth-child(2) {
+  margin-left: 0.357em; }
+
+[dir='rtl'] .terra-Button-text:nth-child(2) {
+  margin-right: 0.357em; }
+
+.terra-Button--default {
+  background-color: #d3d4d5;
+  border-color: #bcbfc0;
+  color: #383f42; }
+  .terra-Button--default:focus, .terra-Button--default:hover, .terra-Button--default.is-hovered {
+    background-color: #bcbfc0;
+    color: #222a2e; }
+  .terra-Button--default:active, .terra-Button--default.is-active {
+    background-color: #4e5558;
+    border-color: #4e5558;
+    color: #fff; }
+  .terra-Button--default:disabled, .terra-Button--default.is-disabled {
+    background-color: #e8e9ea;
+    border-color: #d3d4d5;
+    color: #909496; }
+
+.terra-Button--primary {
+  background-color: #007cc3;
+  border-color: #0065a3;
+  color: #fff; }
+  .terra-Button--primary:focus, .terra-Button--primary:hover, .terra-Button--primary.is-hovered {
+    background-color: #0065a3;
+    color: #fff; }
+  .terra-Button--primary:active, .terra-Button--primary.is-active {
+    background-color: #004c76;
+    border-color: #383f42;
+    color: #fff; }
+  .terra-Button--primary:disabled, .terra-Button--primary.is-disabled {
+    background-color: #cce9f9;
+    border-color: #a6d9f4;
+    color: #909496; }
+
+.terra-Button--secondary {
+  background-color: transparent;
+  border-color: #bcbfc0;
+  border-width: 1px;
+  color: #4e5558; }
+  .terra-Button--secondary:focus, .terra-Button--secondary:hover, .terra-Button--secondary.is-hovered {
+    background-color: #bcbfc0;
+    color: #222a2e; }
+  .terra-Button--secondary:active, .terra-Button--secondary.is-active {
+    background-color: #4e5558;
+    border-color: #4e5558;
+    color: #fff; }
+  .terra-Button--secondary:disabled, .terra-Button--secondary.is-disabled {
+    background-color: transparent;
+    border-color: #d3d4d5;
+    color: #909496; }
+
+.terra-Button--link {
+  background-color: transparent;
+  border-color: transparent;
+  color: #0065a3; }
+  .terra-Button--link:focus, .terra-Button--link:hover, .terra-Button--link.is-hovered, .terra-Button--link:active, .terra-Button--link.is-active {
+    color: #004570;
+    text-decoration: underline; }
+  .terra-Button--link:disabled, .terra-Button--link.is-disabled {
+    color: #909496; }
+
+.terra-Button--tiny {
+  font-size: 0.5rem; }
+
+.terra-Button--small {
+  font-size: 0.8rem; }
+
+.terra-Button--medium {
+  font-size: 1rem; }
+
+.terra-Button--large {
+  font-size: 1.4rem; }
+
+.terra-Button--huge {
+  font-size: 1.7rem; }
+
+.terra-Button--block {
+  display: block;
+  width: 100%; }
+
+.terra-Button--compact {
+  padding-bottom: 0;
+  padding-top: 0; }
+.terraClinical-ErrorView {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.857rem 0 1.429rem;
+  width: 100%; }
+
+.terraClinical-ErrorView-glyph {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-bottom: 0.2857rem; }
+
+.terraClinical-ErrorView-text {
+  color: #c8cacb;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 1.7142857142857142rem;
+  line-height: 1.284; }
+  [dir='ltr'] .terraClinical-ErrorView-text,
+  [dir='rtl'] .terraClinical-ErrorView-text {
+    text-align: center; }
+
+.terraClinical-ErrorView-button {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-top: 0.2857rem; }
 .terraClinical-ItemView {
   word-break: break-word;
   word-wrap: break-word; }
@@ -1325,6 +1552,283 @@ ul {
 
 .terraClinical-ItemView-comment--icon {
   fill: #bcbfc0; }
+.terra-Arrange {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.terra-Arrange-fitStart,
+.terra-Arrange-fitEnd {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.terra-Arrange-fill {
+  display: block;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.terra-Arrange-fitStart,
+.terra-Arrange-fitEnd,
+.terra-Arrange-fill {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
+
+.terra-Arrange-fitStart--center,
+.terra-Arrange-fitEnd--center,
+.terra-Arrange-fill--center {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center; }
+
+.terra-Arrange-fitStart--bottom,
+.terra-Arrange-fitEnd--bottom,
+.terra-Arrange-fill--bottom {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
+.terra-Arrange-fitStart--stretch,
+.terra-Arrange-fitEnd--stretch,
+.terra-Arrange-fill--stretch {
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+              -ms-grid-row-align: stretch;
+          align-self: stretch; }
+.terraClinical-Header {
+  background-color: #f4f4f4;
+  border-bottom-color: #dedfe0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  height: 3.587rem;
+  padding: 0.714rem;
+  width: 100%; }
+  .terraClinical-Header .terraClinical-Header-title {
+    font-size: 1.285rem;
+    font-weight: normal;
+    line-height: 1.75;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal; }
+button.terra-Button,
+html input[type='button'].terra-Button,
+input[type='reset'].terra-Button,
+input[type='submit'].terra-Button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button; }
+
+.terra-Button {
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.429;
+  margin-bottom: 0.357em;
+  margin-top: 0.357em;
+  padding-bottom: 0.286em;
+  padding-top: 0.286em;
+  text-decoration: none;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: normal; }
+  [dir='ltr'] .terra-Button {
+    margin-left: 0;
+    margin-right: 0.714em; }
+  [dir='rtl'] .terra-Button {
+    margin-left: 0.714em;
+    margin-right: 0; }
+  [dir='ltr'] .terra-Button {
+    padding-left: 0.714em;
+    padding-right: 0.714em; }
+  [dir='rtl'] .terra-Button {
+    padding-left: 0.714em;
+    padding-right: 0.714em; }
+  [dir='ltr'] .terra-Button,
+  [dir='rtl'] .terra-Button {
+    text-align: center; }
+  .terra-Button::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  .terra-Button:-moz-focusring {
+    outline: 1px dotted #1c1f21;
+    -moz-outline-radius: 0.25em; }
+  .terra-Button:disabled, .terra-Button.is-disabled {
+    cursor: default;
+    opacity: 0.7;
+    pointer-events: none; }
+  [dir='ltr'] .terra-Button:last-child {
+    margin-right: 0; }
+  [dir='rtl'] .terra-Button:last-child {
+    margin-left: 0; }
+
+[dir='ltr'] .terra-Button-text:first-child:not(:last-child) {
+  margin-right: 0.357em; }
+
+[dir='rtl'] .terra-Button-text:first-child:not(:last-child) {
+  margin-left: 0.357em; }
+
+[dir='ltr'] .terra-Button-text:nth-child(2) {
+  margin-left: 0.357em; }
+
+[dir='rtl'] .terra-Button-text:nth-child(2) {
+  margin-right: 0.357em; }
+
+.terra-Button--default {
+  background-color: #d3d4d5;
+  border-color: #bcbfc0;
+  color: #383f42; }
+  .terra-Button--default:focus, .terra-Button--default:hover, .terra-Button--default.is-hovered {
+    background-color: #bcbfc0;
+    color: #222a2e; }
+  .terra-Button--default:active, .terra-Button--default.is-active {
+    background-color: #4e5558;
+    border-color: #4e5558;
+    color: #fff; }
+  .terra-Button--default:disabled, .terra-Button--default.is-disabled {
+    background-color: #e8e9ea;
+    border-color: #d3d4d5;
+    color: #909496; }
+
+.terra-Button--primary {
+  background-color: #007cc3;
+  border-color: #0065a3;
+  color: #fff; }
+  .terra-Button--primary:focus, .terra-Button--primary:hover, .terra-Button--primary.is-hovered {
+    background-color: #0065a3;
+    color: #fff; }
+  .terra-Button--primary:active, .terra-Button--primary.is-active {
+    background-color: #004c76;
+    border-color: #383f42;
+    color: #fff; }
+  .terra-Button--primary:disabled, .terra-Button--primary.is-disabled {
+    background-color: #cce9f9;
+    border-color: #a6d9f4;
+    color: #909496; }
+
+.terra-Button--secondary {
+  background-color: transparent;
+  border-color: #bcbfc0;
+  border-width: 1px;
+  color: #4e5558; }
+  .terra-Button--secondary:focus, .terra-Button--secondary:hover, .terra-Button--secondary.is-hovered {
+    background-color: #bcbfc0;
+    color: #222a2e; }
+  .terra-Button--secondary:active, .terra-Button--secondary.is-active {
+    background-color: #4e5558;
+    border-color: #4e5558;
+    color: #fff; }
+  .terra-Button--secondary:disabled, .terra-Button--secondary.is-disabled {
+    background-color: transparent;
+    border-color: #d3d4d5;
+    color: #909496; }
+
+.terra-Button--link {
+  background-color: transparent;
+  border-color: transparent;
+  color: #0065a3; }
+  .terra-Button--link:focus, .terra-Button--link:hover, .terra-Button--link.is-hovered, .terra-Button--link:active, .terra-Button--link.is-active {
+    color: #004570;
+    text-decoration: underline; }
+  .terra-Button--link:disabled, .terra-Button--link.is-disabled {
+    color: #909496; }
+
+.terra-Button--tiny {
+  font-size: 0.5rem; }
+
+.terra-Button--small {
+  font-size: 0.8rem; }
+
+.terra-Button--medium {
+  font-size: 1rem; }
+
+.terra-Button--large {
+  font-size: 1.4rem; }
+
+.terra-Button--huge {
+  font-size: 1.7rem; }
+
+.terra-Button--block {
+  display: block;
+  width: 100%; }
+
+.terra-Button--compact {
+  padding-bottom: 0;
+  padding-top: 0; }
+.terraClinical-LabelValueView {
+  border: 0;
+  padding: 0.1785rem; }
+
+.terraClinical-LabelValueView-label {
+  color: #909496;
+  font-size: 1rem;
+  line-height: 1.428; }
+
+.terraClinical-LabelValueView-value {
+  font-size: 1.428rem;
+  line-height: 1.428; }
+.terraClinical-NoDataView {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.857rem 0 1.429rem;
+  width: 100%; }
+
+.terraClinical-NoDataView-glyph {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-bottom: 0.2857rem; }
+
+.terraClinical-NoDataView-heading {
+  color: #c8cacb;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 1.7142857142857142rem;
+  line-height: 1.284; }
+  [dir='ltr'] .terraClinical-NoDataView-heading,
+  [dir='rtl'] .terraClinical-NoDataView-heading {
+    text-align: center; }
+
+.terraClinical-NoDataView-subtext {
+  color: #6f7477;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 1rem;
+  line-height: 1.142;
+  padding-top: 0.2857rem; }
+  [dir='ltr'] .terraClinical-NoDataView-subtext,
+  [dir='rtl'] .terraClinical-NoDataView-subtext {
+    text-align: center; }
+
+.terraClinical-NoDataView-subtextContent {
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding-top: 0.2857rem; }
 .terra-Grid {
   box-sizing: border-box;
   display: -webkit-flex;
